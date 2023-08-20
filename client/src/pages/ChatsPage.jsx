@@ -1,6 +1,5 @@
 import React from 'react'
 import { PrettyChatWindow } from 'react-chat-engine-pretty';
-import 'dotenv/config';
 // import { MultiChatSocket, MultiChatWindow, useMultiChatLogic } from 'react-chat-engine-advanced';
 
 const ChatsPage = (props) => {
@@ -9,7 +8,7 @@ const ChatsPage = (props) => {
             {/* <MultiChatSocket {...chatProps} />
             <MultiChatWindow {...chatProps} style={{ height: '100%' }} /> */}
             <PrettyChatWindow 
-                projectId={process.env.PROJECT_ID}
+                projectId={import.meta.env.VITE_PROJECT_ID}
                 username={props.user.username}
                 secret={props.user.secret}
                 style={{ height: '100%'}}
